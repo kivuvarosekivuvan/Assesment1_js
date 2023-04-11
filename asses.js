@@ -23,10 +23,13 @@ function(num,target){
 
 //Given years between 2000 and 2023, console all the leap years in the following
 //sentence, i.e “2020 is a leap year” if not console log i.e “2001 is not a leap year”
-//  var rangex="2000..2023"
-//  for(let i=0; i<rangex.length; i++){
-//     if
-// }
+  var rangex="2000..2023"
+  let feb=28
+ for(let i=0; i<rangex.length; i++){
+    if(feb<=28){
+        console.log("$i is not a leap year")
+    }
+}
 
 
 
