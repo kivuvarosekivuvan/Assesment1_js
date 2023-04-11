@@ -16,9 +16,14 @@ let num =[2,8,0,23,5,45,76];
 target =23;
 
 function(num,target){
-    left=0;
-    right=num.length-1
+   let left=0;
+    letright=num.length-1
+
+while(left<=right){
+let middle= Math.floor((left+right)/2)
 }
+
+if(num[middle]===target)
 
 
 //Given years between 2000 and 2023, console all the leap years in the following
