@@ -1,58 +1,69 @@
 //Write a function that takes in a string and returns it when reversed
 //let food = “eating”
-let food= "eating"
-function mfunction(food){
-    for(let f of food){
-        console.log(f);
-    }
+function mfunction(str){
+  const arrayStr=str.split("")
+  const revas=arrayStr.reverse()
+  const add=revas.join("")
+  return add
 }
-mfunction(food);
-console.log(food.reversed());
+let food= "eating"
+const result =mfunction(food)
+console.log(result);
 //Write a function that takes in the following array and consoles the target if it is found else
 //null
 //let num = [2,8,0,23,5,45,76]
 //Target = 23
+
+function p(num,target){
+   let left=0;
+    let right=num.length-1
+
+    while(left<=right){
+    let middle= Math.floor((left+right)/2)
+
+    if(num[middle]===target){
+    return middle
+}
+     else if(num[middle]>target){
+     middle -1
+}
+     else{
+     middle +1
+}}
+     return null;
+}
 let num =[2,8,0,23,5,45,76];
 target =23;
-
-function(num,target){
-   let left=0;
-    letright=num.length-1
-
-while(left<=right){
-let middle= Math.floor((left+right)/2)
-}
-
-if(num[middle]===target)
-
+console.log(p(num,target))
 
 //Given years between 2000 and 2023, console all the leap years in the following
 //sentence, i.e “2020 is a leap year” if not console log i.e “2001 is not a leap year”
-  var rangex="2000..2023"
-  let feb=28
- for(let i=0; i<rangex.length; i++){
-    if(feb<=28){
-        console.log("$i is not a leap year")
+year=2000;
+function checkLeap(year){
+  for(let year=2000; year<=2023; year++)  
+  if(year %4 ==0){
+        console.log(year + ` is a leap year`)
+    }
+    else{
+        console.log(year + ` is not a leap year`)
     }
 }
-
-
-
-
-
+checkLeap(year)
 //Given a range of numbers from 0 to 100, console”Fizz” if the numbers are divisible by 3,
 //“Buzz” if the numbers are divisible by 5, and “FizzBuzz” if divisible by both 3 and 5.
 
-var range="0..100";
-for (let i=0; i<range.length; i++){
+for (let i=0; i<=100; i++){
     if(i%3 ==0 && i%5 ==0){
-        console.log("FizzBuzz");
+        console.log(i + " is FizzBuzz");
     }
     else if(i%3 ==0){
-        console.log("Fizz");
+        console.log(i+ " is Fizz");
     }
     else if(i%5==0){
-        console.log("Buzz");
+        console.log(i+ " is Buzz");
+    }
+    else{
+        console.log(i)
     }
 }
 
@@ -69,13 +80,8 @@ console.log({all});
 //let nums = [“10”,”24”,”45”,”56”,”67”]
 
 let nums = ["10", "24", "45", "56","67"];
-let z =[];
-function mfun(){
-for(let i of nums){
-   z.push(...i);
-return z
-}
-}
-console.log(z);
-mfun();
-
+function change(array){
+    return array
+    }
+console.log(...nums)
+change()
