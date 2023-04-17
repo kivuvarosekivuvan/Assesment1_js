@@ -1,18 +1,40 @@
 //Write a function that takes in a string and returns it when reversed
 //let food = “eating”
-function mfunction(str){
-  const arrayStr=str.split("")
-  const revas=arrayStr.reverse()
-  const add=revas.join("")
-  return add
+function mfunction(food){
+  return food.split("").reverse().join("")
 }
 let food= "eating"
-const result =mfunction(food)
-console.log(result);
+console.log(mfunction(food));
 //Write a function that takes in the following array and consoles the target if it is found else
 //null
 //let num = [2,8,0,23,5,45,76]
 //Target = 23
+
+function divideArr(arr){
+    if (arr.length <= 1){
+return arr;
+    }
+       let middle = Math.floor(arr.length/2);
+       let left = arr.slice(0,middle);
+       let right = arr.slice(middle);
+       console.log({left});
+       console.log([right]);
+return sortedArr(divideArr(left), divideArr(right));
+}
+
+function sortedArr(num){
+       let emptyArr = [];
+    while(left.length && right.length){
+        if(left[0] < right[0]){
+            emptyArr.push(left.shift()) ;      
+        }
+else{
+    emptyArr.push(right.shift());
+}
+    }
+    return [...emptyArr,...left,...right];
+}
+
 
 function p(num,target){
    let left=0;
@@ -34,6 +56,7 @@ function p(num,target){
 }
 let num =[2,8,0,23,5,45,76];
 target =23;
+console.log(sortedArr(num))
 console.log(p(num,target))
 
 //Given years between 2000 and 2023, console all the leap years in the following
@@ -79,9 +102,12 @@ console.log({all});
 //turned into a number
 //let nums = [“10”,”24”,”45”,”56”,”67”]
 
-let nums = ["10", "24", "45", "56","67"];
-function change(array){
-    return array
+function change(arrays){
+    x=[];
+    for(num of arrays){
+        x.push(parseInt(num))
     }
-console.log(...nums)
-change()
+    return x
+    }
+ let nums = ["10", "24", "45", "56","67"];
+ console.log(change(arrays))
